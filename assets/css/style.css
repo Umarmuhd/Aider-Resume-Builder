@@ -12,6 +12,14 @@ body {
     max-width: 1440px;
 }
 
+nav ul li a{
+    color: #181818;
+}
+
+nav ul li a:hover{
+    color: #F5487F;
+}
+
 h1 {
     font-size: 18px;
     font-weight: 500;

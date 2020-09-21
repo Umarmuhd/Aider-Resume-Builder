@@ -12,17 +12,18 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap"
         rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>Aider Resume</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
     <!-- *** Navbar Starts *** -->
     <nav class="navbar navbar-expand-lg py-4">
         <!-- Container Starts -->
-        <div class="container">
-            <a class="navbar-brand" href="./index.html"><img src="images/AIDer.png" alt="Aider logo" /></a>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html"><img src="./assets/images/AIDer.png" alt="Aider logo" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" style="outline: 0;"
                 aria-label="Toggle navigation">
@@ -55,7 +56,7 @@
     <section id="hero">
         <div class="container">
             <div class="row">
-                <div class="col hero-left">
+                <div class="col hero-left" data-aos="fade-down-right">
                     <h1>Boost your chances of landing that</h1>
                     <h2>Dream Job.</h2>
                     <p class="text-left">Let’s aid you to build your resume using our wisely designed templates and
@@ -70,8 +71,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="col hero-right">
-                    <img src="images/heroRight.svg" alt="Hero-left-image">
+                <div class="col hero-right" data-aos="fade-down-left">
+                    <img src="./assets/images/heroRight.svg" alt="Hero-left-image">
                 </div>
             </div>
         </div>
@@ -84,33 +85,33 @@
             <h1>Aider’s</h1>
             <h3>Amazing features</h3>
             <div class="row">
-                <div class="col">
+                <div class="col" data-aos="zoom-in">
                     <div class="feature-item mr-4">
-                        <img src="images/easyToUse.svg" alt="">
+                        <img src="./assets/images/easyToUse.svg" alt="">
                         <h4>Easy to use</h4>
                         <p>Our free templates only requires you to choose between your preferred layout and edit to fit
                             your personality.</p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" data-aos="zoom-in-up">
                     <div class="feature-item mr-4">
-                        <img src="images/onlineBuilder.svg" alt="">
+                        <img src="./assets/images/onlineBuilder.svg" alt="">
                         <h4>Online builder</h4>
                         <p>Build your professional resume online,our resume layout builder makes sure all your content
                             is well organized.</p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" data-aos="zoom-in-down">
                     <div class="feature-item mr-4">
-                        <img src="images/downloadOffline.svg" alt="">
+                        <img src="./assets/images/downloadOffline.svg" alt="">
                         <h4>Download offline</h4>
                         <p>Not only do you get to build your resume free and online, you also get to download resume as
                             pdf for offline and external usage. </p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" data-aos="zoom-in-left">
                     <div class="feature-item mr-4">
-                        <img src="images/support247.svg" alt="">
+                        <img src="./assets/images/support247.svg" alt="">
                         <h4>Support 24/7</h4>
                         <p>If you are not sure how to write a resume,do not worry. Our resume builder is readily
                             available to give you all the assistance you will need.</p>
@@ -124,10 +125,13 @@
         <div class="container">
             <div class="explore-wrapper d-flex justify-content-between">
                 <div class="template-images d-flex">
-                    <img class="template-1" src="images/template-1.jpeg" alt="">
-                    <img class="template-2" src="images/template-2.jpeg" alt="">
+                    <img class="template-1" src="./assets/images/template-1.jpeg" alt="" data-aos="fade-up"
+                        data-aos-duration="3000">
+                    <img class="template-2" src="./assets/images/template-2.jpeg" alt="" data-aos="fade-down"
+                        data-aos-easing="linear" data-aos-duration="1500">
                 </div>
-                <div class="explore-content ml-5">
+                <div class="explore-content ml-5" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000">
                     <h1>Explore our</h1>
                     <h3>Wisely designed templates</h3>
                     <p>
@@ -166,6 +170,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
