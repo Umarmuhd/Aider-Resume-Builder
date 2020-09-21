@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: "Poppins", Helvetica, sans-serif;
+    color: #181818;
+    background: #FDF5FA;
+    max-width: 1440px;
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 19.35px;
+    color: #F5487F;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 51.6px;
+    margin-bottom: 33px;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+}
+
+.container {
+    margin: 0 100px;
+    padding: 0;
+}
+
+#hero {
+    padding: 46px 0;
+}
+
+.resume-btn a {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0em;
+}
+
+.btn {
+    font-weight: 600;
+    border: none;
+}
+
+.resume-btn {
+    background: #F5487F;
+    padding: 16px 62px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 30px;
+
+}
+
+.hero-left {
+    /* margin-right: 100px; */
+}
+
+.hero-left p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30.01px;
+    max-width: 437px;
+    margin-bottom: 70px;
+}
+
+.btn-outline-secondary {
+    color: #1F306E;
+    padding: 16px 44px;
+    border: 1px solid #1F306E;
+    border-radius: 50px;
+    margin-left: 20px;
+}
+
+.hero-right {
+    width: 628px;
+    max-width: 628px;
+}
+
+.hero-right img {
+    width: 100%;
+}
+
+
+#features {
+    margin: 130px 0;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+
+
+.feature-item h4 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    max-width: 231px;
+}
+
+#explore {
+    background-color: #FCECF3;
+    padding: 70px 0;
+}
+
+.explore-content {
+    margin-top: 122px;
+    padding-bottom: 14px;
+    width: 332px;
+}
+
+.explore-content p {    
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 166.72%
+}
+
+.explore-content p:nth-last-of-type(1) {
+    margin-bottom: 50px;
+}
+
+.template-1,
+.template-2 {
+    width: 380px;
+    height: 492px;
+    border-radius: 0px 50px 50px 30px;
+}
+
+.template-1 {
+    margin-right: 50px;
+}
+
+.template-2 {
+    position: relative;
+    top: 85px;
+
+}
+
+
+#footer {
+    background: #1F306E;
+}
+
+#footer p {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0em;
+    color: #BDBDBD;
+}
