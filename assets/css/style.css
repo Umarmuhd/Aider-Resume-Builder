@@ -172,6 +172,35 @@ h3 {
 
 }
 
+/* Testimonials */
+#testimonials{
+    padding: 77px 0 150px;
+}
+.testimonial {
+    background: #FFF5FA;
+    padding: 30px 24px;
+    box-shadow: 0px 10px 30px rgba(255, 46, 99, 0.08);
+    border-radius: 0px 50px 50px 30px;
+    color: #181818;
+}
+
+.col-md-4 {
+    margin-top: 25px
+}
+
+.name {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: -3px
+}
+
+.time {
+    font-size: 13px;
+    color: #828282;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
 
 #footer {
     background: #1F306E;
