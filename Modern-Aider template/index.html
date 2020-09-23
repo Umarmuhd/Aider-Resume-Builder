@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <title>Modern Aider</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="no-print" id="left">
+            <div id="panel">
+                <h3 class="text-center" data-toggle="modal">Aider</h3>
+         <!--   <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#usageModal">VIEW INSTRUCTIONS</button> -->
+            <button class="btn btn-block btn-success" onclick="window.print()">PRINT AS PDF</button>
+    
+            <hr>
+    
+            <h4 class="text-center">Template settings</h4>
+            <br>
+            
+    
+            <br>
+    
+                <h5>
+                    Font type
+                    <div class="toggle-button">
+                        <div class="toggle-option" data-toggle="font" id="fontVerdanaSans">1</div>
+                        <div class="toggle-option selected" data-toggle="font" id="fontMonospace">2</div>
+                        <div class="toggle-option" data-toggle="font" id="fontRoboto">3</div>
+                        <div class="toggle-option" data-toggle="font" id="fontDroid">4</div>
+                    </div>
+                </h5>
+                <h5>
+                    Title case
+                    <div class="toggle-button">
+                        <div class="toggle-option selected" data-toggle="case" id="caseNormal">Default</div>
+                        <div class="toggle-option" data-toggle="case" id="caseUpper">Uppercase</div>
+                    </div>
+                </h5>
+                <h5>
+                    Title style
+                    <div class="toggle-button">
+                        <div class="toggle-option selected" data-toggle="title" id="titleRuled">Ruled</div>
+                        <div class="toggle-option" data-toggle="title" id="titleShaded">Shaded</div>
+                    </div>
+                </h5>
+                <h5>
+                    Title rule position
+                    <div class="toggle-button">
+                        <div class="toggle-option selected" data-toggle="rule" id="ruleAbove">Above title</div>
+                        <div class="toggle-option" data-toggle="rule" id="ruleBelow">Below title</div>
+                    </div>
+                </h5>
+                <br>
+                <h5>
+                    Projects layout
+                    <div class="toggle-button">
+                        <div class="toggle-option selected" data-toggle="projects" id="projects1">L1</div>
+                        <div class="toggle-option" data-toggle="projects" id="projects2">L2</div>
+                    </div>
+                </h5>
+                <br>
+    
+            <h5>
+                <button class="btn btn-sm btn-block btn-primary" data-toggle="modal" data-target="#sectionToggleModal">Show/Hide sections</button>
+            </h5>
+    
+            <hr>
+    
+            <h4 class="text-center">Lists and points</h4>
+            <button class="btn btn-block btn-xs btn-success" onclick="insertList();">+ Insert sub-list</button>
+            <button class="btn btn-block btn-xs btn-warning" onclick="decreaseIndent();">&lt;&lt; Decrese indentation</button>
+            <button class="btn btn-block btn-xs btn-warning" onclick="increaseIndent();">&gt;&gt; Increase indentation</button>
+            <h5>
+                List style :
+                <div class="toggle-button">
+                    <button class="btn btn-xs custom-button" onclick="changeListStyle('disc');">&#9899;</button>
+                    <button class="btn btn-xs custom-button" onclick="changeListStyle('circle');">&#9898;</button>
+                    <button class="btn btn-xs custom-button" onclick="changeListStyle('square');">&#9632;</button>
+                    <button class="btn btn-xs custom-button" onclick="changeListStyle('dash');">-</button>
+                    <button class="btn btn-xs custom-button" onclick="changeListStyle('decimal');">1.</button>
+                    <button class="btn btn-xs custom-button" onclick="changeListStyle('upper-roman');">I.</button>
+                    <button class="btn btn-xs custom-button" onclick="changeListStyle('lower-roman');">i.</button>
+                    <button class="btn btn-xs custom-button" onclick="changeListStyle('upper-alpha');">A.</button>
+                    <button class="btn btn-xs custom-button" onclick="changeListStyle('lower-alpha');">a.</button>
+                </div>
+            </h5>
+    
+        </div>
+        </div>
+        <div class="resume" id="page">
+            <div class="resume-left">
+                <div class="resume_profile">
+                    <h1>Alexendria
+                        Udinov</h1>
+                        <h2>UI/UX Designer</h2>
+                </div>
+                <div class="resume-content">
+                    <div class="resume_item resume_contact">
+                        <div class="title">
+                            <p class="bold">Contact</p>
+                        </div>
+                        <ul>
+                            <li class="data">alexudinov@gmail.com</li>
+                            <li class="data">993283293</li>
+                            <li class="data">89, Union Terrace, London, UK.</li>
+                        </ul>
+                    </div>
+                    <div class="resume_item resume_responsibilities">
+                        <div class="title">
+                            <p class="bold">Responsibilities</p>
+                        </div>
+                        <ul>
+                            <li>Front-end lead for this Flex based
+                                application with a mobile aspect.
+                                Was tasked with building a large
+                                high profile Web 2.0 project.</li>
+                            <li>Front-end lead for this Flex based
+                                application with a mobile aspect.
+                                Was tasked with building a large
+                                high profile Web 2.0 project.</li>
+                            <li>Front-end lead for this Flex based
+                                application with a mobile aspect.
+                                Was tasked with building a large
+                                high profile Web 2.0 project.</li>
+                        </ul>
+                    </div>
+                    <div class="resume_item resume_education">
+                        <div class="title">
+                            <p class="bold">Education</p>
+                        </div>
+                        <ul>
+                            <li class="education_item">
+                                <p><span class="semi-bold">B.Eng Computer Engineering,</span> 2005 - 2010
+                                </p>
+                                <p>Massachusetts University, US</p>
+                                <p>CGPA : 4.02 /5
+                                </p>
+                            </li>
+                        </ul>                    
+                    </div>
+                </div>
+            </div>
+            <div class="resume-right">
+               <div class="resume-content-2">
+                <div class="resume_item resume_experience">
+                    <div class="title">
+                        <p class="bold">Work Experience</p>
+                    </div>
+                    <ul>
+                        <li class="experience_item">
+                            <p class="semi-bold date">Sep 2017 to Present</p>
+                            <p class="semi-bold role">Team Lead- Google</p>
+                            <p>Front-end lead for this Flex based 
+                                application with a mobile aspect.
+                                Was tasked with building a large
+                                high profile Web 2.0 project.</p>
+                        </li>
+                        <li class="experience_item">
+                            <p class="semi-bold date">Feb 2014 to Aug 2016</p>
+                            <p class="semi-bold role">Senior Frontend Developer- Microsoft</p>
+                            <p>Front-end lead for this Flex based 
+                                application with a mobile aspect.
+                                Was tasked with building a large
+                                high profile Web 2.0 project.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="two-box grid">
+                    <div class="resume_item resume_tools">
+                        <div class="title">
+                            <p class="bold">Tools</p>
+                        </div>
+                        <ul>
+                            <li class="tool_item">
+                                Adobe XD
+                            </li>
+                            <li class="tool_item">
+                                Adobe Photoshop
+                            </li>
+                            <li class="tool_item">
+                                Adobe Illustrator
+                            </li>
+                            <li class="tool_item">
+                                Figma
+                            </li>
+                            <li class="tool_item">
+                                Sketch
+                            </li>
+                            <li class="tool_item">
+                                VS Code
+                            </li>
+                            <li class="tool_item">
+                                Sublime Text
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="resume_item resume_skills">
+                        <div class="title">
+                            <p class="bold">Skills</p>
+                        </div>
+                        <ul>
+                            <li class="skill_item">
+                                UX Research
+                            </li>
+                            <li class="skill_item">
+                                Rapid Prototyping
+                            </li>
+                            <li class="skill_item">
+                                Interaction Design
+                            </li>
+                            <li class="skill_item">
+                                Coding 
+                            </li>
+                            <li class="skill_item">
+                                Adaptability 
+                            </li>
+                            <li class="skill_item">
+                                Team Player
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="resume_item resume_technologies">
+                        <div class="title">
+                            <p class="bold">Technologies</p>
+                        </div>
+                        <ul>
+                            <li class="technology_item">HTML</li>
+                            <li class="technology_item">CSS/SCSS</li>
+                            <li class="technology_item">Javascript, JQuery</li>
+                            <li class="technology_item">Angular</li>
+                            <li class="technology_item">Vue</li>
+                            <li class="technology_item">React</li>
+                        </ul>
+                    </div>
+                    <div class="resume_item resume_hobbies">
+                        <div class="title">
+                            <p class="bold">Hobbies</p>
+                        </div>
+                        <ul>
+                            <li class="hobby_item">Trekking</li>
+                            <li class="hobby_item">Cycling</li>
+                            <li class="hobby_item">Chess</li>
+                        </ul>
+                    </div>
+                    <div class="resume_item resume_links">
+                        <div class="title">
+                            <p class="bold">Links</p>
+                        </div>
+                        <ul>
+                            <li class="link_item"><a href="https://github.com">github.io</a></li>
+                            <li class="link_item"><a href="https://linkedin.com">Linkedin.com</a></li>
+                            <li class="link_item"><a href="https://twitter.com">Twitter.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+               </div>
+            </div>
+        </div>
+    </div>
+  
+
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
