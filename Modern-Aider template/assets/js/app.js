@@ -1,6 +1,6 @@
 document.querySelector('#page').contentEditable = true;
 
-defaultTemplateVars = [ "fontMonospace" , "caseNormal" , "experience1"]
+defaultTemplateVars = [ "fontMonospace" , "caseNormal"]
 
 $('.toggle-option').click(function(){
 	toggleType = $(this).attr('data-toggle');
@@ -38,53 +38,61 @@ function toggleSection(sectionName,toggleState)
 	$('#'+sectionName).toggle();
 }
 
-
-
 function changeTemplate(toggleType,toggleValue)
 {
 	switch(toggleType)
 	{
 		case 'font':
-			if(toggleValue=='fontVerdanaSans')
-				$('#page').removeClass('droid').removeClass('roboto').removeClass('montserrat').addClass('verdana-sans');
-			else if(toggleValue=='fontMonospace')
-				$('#page').removeClass('verdana-sans').removeClass('droid').removeClass('roboto').addClass('montserrat');
-			else if(toggleValue=='fontRoboto')
-				$('#page').removeClass('montserrat').removeClass('verdana-sans').removeClass('droid').addClass('roboto');
-			else if(toggleValue=='fontDroid')
-				$('#page').removeClass('roboto').removeClass('montserrat').removeClass('verdana-sans').addClass('droid');
+			if(toggleValue=='montserrat')
+				$('#page').removeClass('poppins').removeClass('openSans').removeClass('monospace').addClass('montserrat');
+			else if(toggleValue=='poppins')
+				$('#page').removeClass('montserrat').removeClass('openSans').removeClass('monospace').addClass('poppins');
+			else if(toggleValue=='openSans')
+				$('#page').removeClass('montserrat').removeClass('monospace').removeClass('poppins').addClass('openSans');
+			else if(toggleValue=='monospace')
+				$('#page').removeClass('montserrat').removeClass('poppins').removeClass('openSans').addClass('monospace');
 			break;
 			case 'case':
-			if(toggleValue=='caseNormal')
-				$('.section-title').removeClass('uppercase');
+			if(toggleValue == 'caseNormal')
+				$('.title').removeClass('uppercase');
 			else
-				$('.section-title').addClass('uppercase');
-			break;
-			case 'experience':
-			if(toggleValue=='experience1')
-			{
-				$("#sectionExperience .title , #sectionExperience .time").css('display','inline-block');
-				$("#sectionExperience .time").addClass('right').removeClass('tab');
-				$("#sectionExperience .link").show();
-			}
-			else
-			{
-				$("#sectionExperience .title , #sectionExperience .time").css('display','block');
-				$("#sectionExperience .time").removeClass('right').addClass('tab');
-				$("#sectionExperience .link").hide();
-			}
+				$('.title').addClass('uppercase');
 			break;
 	}
 }
 function insertList()
-{
+{	
 	node = getSelectionContainerElement();
 	var ul = document.createElement("ul");
-	ul.className = 'decimal';
 	ul.style.marginLeft = '0px';
-	ul.innerHTML = "<li>Sub-point 1 : Description</li><li>Sub-point 2 : Description</li>";
+	
+	console.log(getSelectionContainerElement())
+
+	if((node.className === "last-exp") || (node.className === "first-exp")){
+		if(node.className === "last-exp"){
+			$(".last-exp")[1].style.marginBottom = "10px"
+		}
+		else if(node.className === "first-exp"){
+			ul.style.marginTop = "10px"
+		}
+		ul.innerHTML = "<li class='experience_item'><p class='semi-bold date'>Feb 2014 to Aug 2016</p><p class='semi-bold role'>Senior Frontend Developer- Microsoft</p><p class='last-exp first-exp'>Front-end lead for this Flex based 	application with a mobile aspect. Was tasked with building a large high profile Web 2.0 project.</p></li>";
+	}
+
+	else if((node.className === "last-edu") || (node.className === "first-edu")){
+
+		if(node.className === "last-edu"){
+			$(".last-edu")[0].style.marginBottom = "10px"
+		}
+		else if(node.className === "first-edu"){
+			ul.style.marginTop = "10px"
+		}
+
+		ul.innerHTML = "<li class='education_item'><p><span class='semi-bold'>B.Eng Computer Engineering,</span> 2005 - 2010</p><p>Massachusetts University, US</p><p class='last-edu'>CGPA : 4.02 /5</p></li>"
+	}
+
 	insertAfter(node,ul);
 }
+
 function changeListStyle(value)
 {
 	node = getSelectionContainerElement();
@@ -93,7 +101,6 @@ function changeListStyle(value)
 	node.className = value;
 
 }
-
 
 function getSelectionContainerElement()
 {
@@ -134,6 +141,6 @@ function getSelectionContainerElement()
 	}
 }
 
-function insertAfter(referenceNode,newNode) {
+function insertAfter(referenceNode, newNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }

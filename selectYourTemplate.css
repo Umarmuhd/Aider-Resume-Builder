@@ -50,9 +50,9 @@ text-align: left;
     width: 100%;
 }
 
-/* .color-item:nth-last-of-type(1) {
+.color-item:nth-last-of-type(1) {
     margin: 0;
-} */
+}
 
 .template-images{
     margin-top: 150px;

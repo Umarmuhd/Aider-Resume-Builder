@@ -1,0 +1,29 @@
+#left , #right {
+	overflow: auto;
+	padding: 0;
+}
+#right {
+	right: 0;
+}
+@media(min-width:768px)
+{
+	#left , #right {
+		position: absolute;
+		margin-top: 0px;
+		top: 0;
+		bottom: 0;
+	}
+}
+
+@media print {
+	.no-print, .no-print * { display: none !important; }
+	
+	#left , #page {
+		overflow: initial;
+		min-height: initial;
+		height: initial;
+		position: relative;
+		margin: 0px auto;
+	}
+
+}
