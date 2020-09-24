@@ -1,0 +1,220 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #585c68; 
+    font-family: "Roboto",cursive,sans-serif;
+}
+
+h1{
+    color: #1F306E;
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 36px;
+    margin-bottom: 45px;
+}
+
+p{
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 11px;
+}
+
+ul{
+    list-style: none;
+}
+
+.main{
+    display: flex;
+}
+.resume{
+    width: 595px;
+    height: auto;
+    display: flex;
+    margin: 50px auto;
+    background-color: #FFFFFF;
+    padding: 59px 20px 30px 30px;
+}
+
+.resume-body, .topbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.topbar{
+    margin-bottom: 40px;
+    padding: 0 17px 0 4px;
+}
+
+.profile p{
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 12px;
+    color:#666666;
+}
+
+.web{
+    border-bottom: solid 2px rgba(130, 132, 136, 0.7);
+}
+
+.contact-info{
+    margin: auto 0 0;
+}
+.contact-info li{
+    list-style: none;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 9px;
+}
+.resume_about p{
+    width: 229px;
+}
+.resume-left{
+    margin-right: 10px;
+}
+.bold{
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: left;
+    color: #1F306E;
+    width: 233px;
+    margin-bottom: 12px;
+    padding-bottom: 5px;
+    border-bottom: solid #111111 0.2px;
+}
+
+.title p{
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: left;
+    color: #1F306E;
+    width: 233px;
+    margin-bottom: 12px;
+    padding-bottom: 5px;
+    border-bottom: solid #111111 0.2px; 
+}
+
+.semi-bold{
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+}
+
+.resume_item{
+    margin-bottom: 20px;
+}
+
+.experience_item{
+    margin-bottom: 10px;
+}
+.experience_item .semi-bold{
+    padding-bottom: 3px;
+}
+.exp_role{
+    width: 220px;
+    text-align: left;
+    margin-top: 2px;
+}
+
+.training_item{
+    display: flex;
+    margin-bottom: 12px;
+}
+.training_item span{
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    margin-right: 7px;
+}
+.training-title{
+    margin-bottom: 5px;
+}
+
+.education_item{
+    margin-bottom: 12px;
+    display: flex;
+}
+.education_item span{
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    margin-right: 7px;
+}
+
+
+.li_wrap{
+	display: flex;
+	margin-bottom: 15px;
+}
+
+.li_wrap .date {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    margin-right: 7px;
+}
+
+.li_wrap .info{
+	padding-left: 10px;
+	position: relative;
+}
+
+.li_wrap .info_title{
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 11px;
+    margin-bottom: 5px;
+}
+
+.li_wrap .info_sch{
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 11px;
+    margin-bottom: 3px;
+}
+
+#info_grade{
+	margin-top: 3px;
+}
+
+.li_wrap .info:before{
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+	position: absolute;
+	top: 3px;
+    left: 0px;
+    background-color: #000000;
+}
+
+
+.li_wrap .info:after{
+	content: "";
+	position: absolute;
+	top: 10px;
+	left: 1.5px;
+	width: 0.2px;
+	height: 90%;
+	background: #000000;
+}
+
+.skill_item{
+    display: flex;
+    justify-content: space-between;
+}
+.skill_item p{
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 11px;
+}
+
+.resume_interest ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}

@@ -1,55 +1,12 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    background: #585c68; 
-    font-family: "Poppins", Helvetica, sans-serif;
-}
-
-h1{
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 47px;
-    text-align: left;
-    color: #FFFFFF;
-}
-
-h2{
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 27px;
-    text-align: left;
-    color: #FFFFFF;
-}
-
-li{
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 200;
-    line-height: 15px;
-    text-align: left;    
-}
-
-a{
-    text-decoration: none;
-}
-
-.main{
-    display: flex;
-}
-
 /* Panel */
-.mont{
-	font-family: "Montserrat", sans-serif;
+.Rob{
+	font-family: "Roboto", sans-serif;
 }
-.pop{
-	font-family: "Poppins", sans-serif;	
+.cur{
+	font-family: cursive, sans-serif;	
 }
-.opens{
-	font-family: "Open Sans", sans-serif;
+.ubu{
+	font-family: 'Ubuntu', sans-serif;
 }
 .monos{
 	font-family: monospace, sans-serif
@@ -93,85 +50,20 @@ a{
 
 
 
-
-
-
-.bold{
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 23px;
-}
-
-.semi-bold{
-    font-size: 11px;
-    font-weight: 400;
-    line-height: 17px;
-
-}
-
-.resume{
-    width: 595px;
-    height: auto;
-    display: flex;
-    margin: 50px auto;
-    background-color: #FFFFFF;
-}
-.resume_profile{
-    height: 265px;
-    width: 288px;
-    background: #1F306E;
-    border-radius: 0px 200px 200px 100px;
-    padding: 65px 20px;
-}
-
-.resume-content{
-    padding: 30px 30px 30px 40px;
-}
-.resume-content-2{
-    padding: 30px 30px 30px 2px;
-}
-
-.title{
-    margin-bottom: 10px;
-}
-
-.resume_contact ul{
-    list-style-type: square;
-    padding-left: 12px;    
-}
-.resume_responsibilities ul{
-    padding-left: 12px;
-}
-.resume_education ul li, .resume_experience ul li{
-    list-style: none;
-    margin-bottom: 10px;
-}
-.grid ul{
-    list-style: inside;
-}
-
-.resume_item{
-    margin-bottom: 30px;
-}
-
-.grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
+/* Customization Styles */
 
 /* Customization Option */
 
 /* Font Toggling */
 
-#page.montserrat * {
-	font-family: "Montserrat", sans-serif;
+#page.roboto * {
+	font-family: "Roboto", sans-serif;
 }
-#page.poppins * {
-    font-family: "Poppins", sans-serif;
+#page.cursive * {
+    font-family: cursive, sans-serif;
 }
-#page.openSans * {
-	font-family: "Open Sans", sans-serif;
+#page.ubuntu * {
+	font-family: 'Ubuntu', sans-serif;
 }
 #page.monospace * {
 	font-family: monospace, sans-serif
@@ -299,13 +191,4 @@ ul.lower-alpha {
 }
 .btn-teal {
 	background-color: #16a085;
-}
-
-
-
-kbd {
-	padding: 0;
-	padding-left: 3px;
-	padding-right: 3px;
-	background-color: #666;
 }
