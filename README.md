@@ -30,9 +30,12 @@ We highly recommend the use of a tablet or PC for comfortable editing of your re
 <ul>
 <li>HTML</li>
 <li>CSS3</li>
-<li>BootStrap</li>
+<li>Bootstrap</li>
 <li>JavaScript</li>
 <li>Python</li>
 </ul>
+
+# Figma Link
+https://www.figma.com/file/PWBtWrZHHtfMcJm5DCwbCD/Ingressive---Team-Aider---Resume-Builder?node-id=3%3A5
 
 # Live Link
