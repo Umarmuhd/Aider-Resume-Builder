@@ -25,9 +25,10 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html"><img src="./assets/images/AIDer.png" alt="Aider logo" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" style="outline: 0;"
+                aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <span class="bar"></span>
+                <span class="navbar"><img
+                        src="https://img.icons8.com/plasticine/35/000000/circled-menu.png" /></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -36,10 +37,10 @@
                         <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Templates</a>
+                        <a class="nav-link" href="#explore-temp">Templates</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Help</a>
+                        <a class="nav-link" href="#features">Help</a>
                     </li>
                 </ul>
                 <!-- Button Build Resume -->
@@ -54,9 +55,9 @@
 
     <!-- Hero Section Start Here -->
     <section id="hero">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col hero-left" data-aos="fade-down-right">
+                <div class="col-md-6 hero-left" data-aos="fade-down-right">
                     <h1>Boost your chances of landing that</h1>
                     <h2>Dream Job.</h2>
                     <p class="text-left">Let’s aid you to build your resume using our wisely designed templates and
@@ -66,13 +67,13 @@
                         <a href="/selectYourTemplate.html" class="btn resume-btn btn-primary text-white">
                             Build resume
                         </a>
-                        <a href="#" class="btn btn-outline-secondary my-2 my-sm-0">
+                        <a href="#explore-temp" class="btn btn-outline-secondary my-2 my-sm-0">
                             Explore templates
                         </a>
                     </div>
                 </div>
-                <div class="col hero-right" data-aos="fade-down-left">
-                    <img src="./assets/images/heroRight.svg" alt="Hero-left-image">
+                <div class="col-md-6 hero-right" data-aos="fade-down-left">
+                    <img src="./assets/images/heroRight.svg" alt="Hero-left-image" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -81,36 +82,38 @@
 
 
     <section id="features">
-        <div class="container">
+        <div class="container-fluid">
+            <div class="title" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
             <h1>Aider’s</h1>
             <h3>Amazing features</h3>
+            </div>
             <div class="row">
-                <div class="col" data-aos="zoom-in">
-                    <div class="feature-item mr-4">
+                <div class="col-md-3" data-aos="zoom-in">
+                    <div class="feature-item">
                         <img src="./assets/images/easyToUse.svg" alt="">
                         <h4>Easy to use</h4>
                         <p>Our free templates only requires you to choose between your preferred layout and edit to fit
                             your personality.</p>
                     </div>
                 </div>
-                <div class="col" data-aos="zoom-in-up">
-                    <div class="feature-item mr-4">
+                <div class="col-md-3" data-aos="zoom-in-up">
+                    <div class="feature-item">
                         <img src="./assets/images/onlineBuilder.svg" alt="">
                         <h4>Online builder</h4>
                         <p>Build your professional resume online,our resume layout builder makes sure all your content
                             is well organized.</p>
                     </div>
                 </div>
-                <div class="col" data-aos="zoom-in-down">
-                    <div class="feature-item mr-4">
+                <div class="col-md-3" data-aos="zoom-in-down">
+                    <div class="feature-item">
                         <img src="./assets/images/downloadOffline.svg" alt="">
                         <h4>Download offline</h4>
                         <p>Not only do you get to build your resume free and online, you also get to download resume as
                             pdf for offline and external usage. </p>
                     </div>
                 </div>
-                <div class="col" data-aos="zoom-in-left">
-                    <div class="feature-item mr-4">
+                <div class="col-md-3" data-aos="zoom-in-up">
+                    <div class="feature-item">
                         <img src="./assets/images/support247.svg" alt="">
                         <h4>Support 24/7</h4>
                         <p>If you are not sure how to write a resume,do not worry. Our resume builder is readily
@@ -122,17 +125,17 @@
     </section>
 
     <section id="explore">
-        <div class="container">
+        <div class="container-fluid">
             <div class="explore-wrapper d-flex justify-content-between">
                 <div class="template-images d-flex">
-                    <img class="template-1" src="./assets/images/template-1.jpeg" alt="" data-aos="fade-up"
+                    <img class="template-1 img-fluid" src="./assets/images/template-1.jpeg" alt="" data-aos="fade-up"
                         data-aos-duration="3000">
-                    <img class="template-2" src="./assets/images/template-2.jpeg" alt="" data-aos="fade-down"
+                    <img class="template-2 img-fluid" src="./assets/images/template-2.jpeg" alt="" data-aos="fade-down"
                         data-aos-easing="linear" data-aos-duration="1500">
                 </div>
                 <div class="explore-content ml-5" data-aos="flip-left" data-aos-easing="ease-out-cubic"
                     data-aos-duration="2000">
-                    <h1>Explore our</h1>
+                    <h1 id="explore-temp">Explore our</h1>
                     <h3>Wisely designed templates</h3>
                     <p>
                         Aider resume builder is the solution you needed, but didn’t know about. Your resume will finally
@@ -149,9 +152,9 @@
     </section>
 
     <section id="testimonials">
-        <div class="container mt-5">
+        <div class="container-fluid mt-5">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                     <div class="testimonial rounded"><img class="mb-3" src="./assets/icons/“.svg"
                             width="15.5">
                         <p>I love it and would recommend it for anyone, it’s so much better than a droll traditional resume.”<br><br></p>
@@ -162,7 +165,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                     <div class="testimonial rounded"><img class="mb-3" src="./assets/icons/“.svg" width="15.5">
                         <p>I love it and would recommend it for anyone, it’s so much better than a droll traditional resume.”<br><br></p>
                         <div class="d-flex flex-row align-items-center"><img class="rounded-circle"
@@ -172,7 +175,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                     <div class="testimonial rounded"><img class="mb-3" src="./assets/icons/“.svg"
                             width="15.5">
                         <p>I love it and would recommend it for anyone, it’s so much better than a droll traditional resume.”<br><br></p>
@@ -187,7 +190,7 @@
     </section>
 
     <section id="footer">
-        <div class="container">
+        <div class="">
             <p class="copyright p-4 text-center m-0">&copy;Copyright Team AIDER resume builder</p>
         </div>
     </section>

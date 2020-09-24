@@ -11,7 +11,6 @@ html {
     background-color: #FDF5FA;
 }
 body{
-    max-width: 1440px;
     font-family: "Poppins", Helvetica, sans-serif;
 }
 h1{
@@ -23,7 +22,7 @@ h1{
 }
 h2{
     font-weight: 700;
-    font-size: 48px;
+    font-size: 38px;
     line-height: 51.6px;
     margin-bottom: 33px;
 }
@@ -42,6 +41,7 @@ text-align: left;
 .color-container{
     margin-top: 57px;
 }
+
 .color-item {
     margin-right: 47px;
     max-width: 70px;
@@ -80,9 +80,136 @@ text-align: left;
 }
 
 #footer p {
-    font-size: 24px;
     font-weight: 400;
     line-height: 36px;
     letter-spacing: 0em;
     color: #BDBDBD;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    .template-images {
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+
+    .template-images img {
+        padding: 1em;
+        margin: 0 !important;
+        width: 350px !important;
+    }
+
+    .template-images div:nth-last-of-type(1) {
+        top: 0;
+        left: 0;
+    }
+
+    .template-item h1, h3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .color-container-mobile {
+        padding: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #footer {
+        margin-top: 15px;
+    }
+
+    .template-images {
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+     .template-images {
+         display: flex !important;
+         flex-direction: column !important;
+         text-align: center !important;
+         justify-content: center !important;
+     }
+
+     .template-images img {
+         padding: 1em;
+         margin: 0 !important;
+         width: 350px !important;
+     }
+
+     .template-images div:nth-last-of-type(1) {
+         top: 0;
+         left: 0;
+     }
+
+     .template-item h1,
+     h3 {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+     }
+
+     #footer {
+         margin-top: 10px;
+     }
+
+     .template-images {
+         margin-top: 50px;
+     }
+
+     .color-container-mobile {
+         padding: 2em;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    .template-images {
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+
+    .template-images img {
+        padding: 1em;
+        margin: 0 !important;
+        width: 350px !important;
+    }
+
+    .template-images div:nth-last-of-type(1) {
+        top: 0;
+        left: 0;
+    }
+
+    .template-item h1,
+    h3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #footer {
+        margin-top: 10px;
+    }
+
+    .template-images {
+        margin-top: 50px;
+    }
+
+    .color-container-mobile {
+        padding: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
