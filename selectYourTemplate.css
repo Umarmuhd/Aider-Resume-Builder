@@ -180,9 +180,14 @@ text-align: left;
     }
 
     .template-images img {
-        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         margin: 0 !important;
-        width: 350px !important;
+        width: 360px !important;
+        height: 360px !important;
     }
 
     .template-images div:nth-last-of-type(1) {
