@@ -30,7 +30,7 @@ We highly recommend the use of a tablet or PC for comfortable editing of your re
 <ul>
 <li>HTML</li>
 <li>CSS3</li>
-<li>BootStrap</li>
+<li>Bootstrap</li>
 <li>JavaScript</li>
 <li>Python</li>
 </ul>
