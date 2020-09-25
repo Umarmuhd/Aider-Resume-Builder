@@ -60,17 +60,29 @@ function insertList() {
     ul.style.marginLeft = '0px';
 
     console.log(getSelectionContainerElement())
-    let firstExp = "bold";
+    let firstExp = "first_exp";
     let lastExp = "exp_role";
 
     if ((node.className === lastExp) || (node.className === firstExp)) {
-        //  if(node.className === "lastExp"){
-        //  	$(".added_exp")[1].style.marginTop = "10px"
-        //  }
-        // else if(node.className === "first-exp"){
-        // 	ul.style.marginTop = "10px"
-        // }
-        ul.innerHTML = "<li class='experience_item'><p class='semi-bold added_exp'>2015 - 2017</p>        <p>Title: Ex. User Interfce Designer</p> <p>Company: Ex. Facebook</p><p class='exp_role'>Primary role: Ex. I Design applications for Infosys intranet & marketplace clients</p></li>";
+        if (node.className === firstExp) {
+
+            var li = document.createElement("li");
+            li.classList.add('experience_item')
+
+            li.innerHTML = "<p class='semi-bold added_exp'>2015 - 2017</p>        <p>Title: Ex. User Interfce Designer</p> <p>Company: Ex. Facebook</p><p class='exp_role'>Primary role: Ex. I Design applications for Infosys intranet & marketplace clients</p>"
+
+            var experienceItems = document.getElementById("experience_items")
+            experienceItems.insertBefore(li, experienceItems.childNodes[0])
+        }
+        else if (node.className === lastExp) {
+            var li = document.createElement("li");
+            li.classList.add('experience_item')
+
+            li.innerHTML = "<p class='semi-bold added_exp'>2015 - 2017</p>        <p>Title: Ex. User Interfce Designer</p> <p>Company: Ex. Facebook</p><p class='exp_role'>Primary role: Ex. I Design applications for Infosys intranet & marketplace clients</p>"
+
+            document.getElementById("experience_items").appendChild(li)
+        }
+        // ul.innerHTML = "<li class='experience_item'><p class='semi-bold added_exp'>2015 - 2017</p>        <p>Title: Ex. User Interfce Designer</p> <p>Company: Ex. Facebook</p><p class='exp_role'>Primary role: Ex. I Design applications for Infosys intranet & marketplace clients</p></li>";
     }
 
     else if ((node.className === "last_train") || (node.className === "first_train")) {
@@ -194,3 +206,74 @@ function getSelectionContainerElement() {
 function insertAfter(referenceNode, newNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
+
+
+
+// Navbar
+
+function toggleClass(elem,className){
+    if (elem.className.indexOf(className) !== -1){
+      elem.className = elem.className.replace(className,'');
+    }
+    else{
+      elem.className = elem.className.replace(/\s+/g,' ') + 	' ' + className;
+    }
+  
+    return elem;
+  }
+  
+  function toggleDisplay(elem){
+    const curDisplayStyle = elem.style.display;			
+  
+    if (curDisplayStyle === 'none' || curDisplayStyle === ''){
+      elem.style.display = 'block';
+    }
+    else{
+      elem.style.display = 'none';
+    }
+  
+  }
+  
+  function toggleMenuDisplay(e){
+    const dropdown = e.currentTarget.parentNode;
+    const menu = dropdown.querySelector('.menu');
+    const icon = dropdown.querySelector('.fa-angle-right');
+  
+    toggleClass(menu,'hide');
+    toggleClass(icon,'rotate-90');
+  }
+  
+  function handleOptionSelected(e){
+    toggleClass(e.target.parentNode, 'hide');			
+  
+    const id = e.target.id;
+    const newValue = e.target.textContent + ' ';
+    const titleElem = document.querySelector('.dropdown .title');
+    const icon = document.querySelector('.dropdown .title .fa');
+  
+  
+    titleElem.textContent = newValue;
+    titleElem.appendChild(icon);
+  
+    //trigger custom event
+    document.querySelector('.dropdown .title').dispatchEvent(new Event('change'));
+      //setTimeout is used so transition is properly shown
+    setTimeout(() => toggleClass(icon,'rotate-90',0));
+  }
+  
+  function handleTitleChange(e){
+    const result = document.getElementById('result');
+  
+    result.innerHTML = 'The result is: ' + e.target.textContent;
+  }
+  
+  //get elements
+  const dropdownTitle = document.querySelector('.dropdown .title');
+  const dropdownOptions = document.querySelectorAll('.dropdown .option');
+  
+  //bind listeners to these elements
+  dropdownTitle.addEventListener('click', toggleMenuDisplay);
+  
+  dropdownOptions.forEach(option => option.addEventListener('click',handleOptionSelected));
+  
+  document.querySelector('.dropdown .title').addEventListener('change',handleTitleChange);

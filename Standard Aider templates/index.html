@@ -9,6 +9,9 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome CDn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Standard Aider</title>
 
     <!-- Original CSS -->
@@ -16,9 +19,33 @@
 
     <!-- Panel Style -->
     <link rel="stylesheet" href="assets/css/panel.css">
+
+    <!-- Navbar Css -->
+    <link rel="stylesheet" href="./assets/css/navbar.css">
+
+    <!-- Print CSS -->
+    <link rel="stylesheet" href="assets/css/print.css">
 </head>
 
 <body>
+
+    <!-- <div class="navbar">
+        <div><a href="#home">Home</a></div>
+        <div><a href="#news">News</a></div>
+        <div></div>
+       
+	<div class='dropdown'>
+		<div class='title pointerCursor'>Select an option <i class="fa fa-angle-right"></i></div>
+		
+		<div class='menu pointerCursor hide'>
+			<div class='option' id='option1'>Option 1</div>
+			<div class='option' id='option2'>Option 2</div>
+			<div class='option' id='option3'>Option 3</div>
+			<div class='option' id='option4'>Option 4</div>
+		</div>
+
+	</div> -->
+
     <div class="main">
         <div class="no-print" id="left">
             <div id="panel">
@@ -56,214 +83,224 @@
                 <button class="btn btn-block btn-xs btn-success" onclick="insertList();">+</button> <br>
             </div>
         </div>
-        <div class="resume">
-            <div id="page">
-                <div class="topbar">
-                    <div class="profile">
-                        <h1>Alexandria Udinov</h1>
-                        <p><span class="web">Web</span> Developer / Designer</p>
+        <div class="print">
+            <div class="resume" id="toPrint">
+                <div id="page">
+                    <div class="topbar">
+                        <div class="profile">
+                            <h1>Alexandria Udinov</h1>
+                            <p><span class="web">Web</span> Developer / Designer</p>
+                        </div>
+                        <ul class="contact-info">
+                            <li>7890328108</li>
+                            <li>example@aider.com</li>
+                            <li>be.net/aider</li>
+                            <li>Hyderabad 500088</li>
+                        </ul>
                     </div>
-                    <ul class="contact-info">
-                        <li>7890328108</li>
-                        <li>example@aider.com</li>
-                        <li>be.net/aider</li>
-                        <li>Hyderabad 500088</li>
-                    </ul>
-                </div>
-                <div class="resume-body">
-                    <div class="resume-left">
-                        <div class="resume_item resume_about">
-                            <div class="title">
-                                <p class="bold">About Me</p>
+                    <div class="resume-body">
+                        <div class="resume-left">
+                            <div class="resume_item resume_about">
+                                <div class="title">
+                                    <p class="bold">About Me</p>
+                                </div>
+                                <p>I’m a designer and a front-end web developer, based out of Hyderabad. Quality
+                                    delivery is
+                                    my
+                                    all
+                                    time
+                                    priority and I always put extreme level of attention to details. I am well versed
+                                    with
+                                    the
+                                    relevant
+                                    technologies.I also like cats.</p>
                             </div>
-                            <p>I’m a designer and a front-end web developer, based out of Hyderabad. Quality delivery is
-                                my
-                                all
-                                time
-                                priority and I always put extreme level of attention to details. I am well versed with
-                                the
-                                relevant
-                                technologies.I also like cats.</p>
-                        </div>
-                        <div class="resume_item resume_experience">
-                            <div class="title">
-                                <p class="bold">Experience</p>
+                            <div class="resume_item resume_experience">
+                                <div class="title">
+                                    <p class="first_exp">Experience</p>
+                                </div>
+                                <ul id="experience_items">
+                                    <li class="experience_item">
+                                        <p class="semi-bold">2015 - Present</p>
+                                        <p>Senior User Interfce Designer</p>
+                                        <p>Infosys Limited, Communication Design Group</p>
+                                        <p class="exp_role">Primary role is to design and/or develop the front end of
+                                            responsive web
+                                            applications for
+                                            Infosys
+                                            intranet & marketplace clients</p>
+                                    </li>
+                                    <li class="experience_item">
+                                        <p class="semi-bold">2012 - 2015</p>
+                                        <p>Freelance</p>
+                                        <p class="exp_role">Logo/Graphic Design, Web Development</p>
+                                    </li>
+                                </ul>
                             </div>
-                            <ul>
-                                <li class="experience_item">
-                                    <p class="semi-bold">2015 - Present</p>
-                                    <p>Senior User Interfce Designer</p> 
-                                    <p>Infosys Limited, Communication Design Group</p>
-                                    <p class="exp_role">Primary role is to design and/or develop the front end of responsive web
-                                        applications for
-                                        Infosys
-                                        intranet & marketplace clients</p>
-                                </li>
-                                <li class="experience_item">
-                                    <p class="semi-bold">2012 - 2015</p>
-                                    <p>Freelance</p>
-                                    <p class="exp_role">Logo/Graphic Design, Web Development</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="resume_item resume_training">
-                            <div class="title">
-                                <p class="first_train">Training</p>
-                            </div>
-                            <ul id="training_items">
-                                <li class="training_item" id="first_training_item">
-                                    <span>2016</span>
-                                    <div>
-                                        <p class="training-title">Infosys Fresher Training</p>
-                                        <p>Microsoft .NET</p>
-                                        <p>Duration - 5M</p>
-                                    </div>
-                                </li>
-                                <li class="training_item">
-                                    <span>2015</span>
-                                    <div>
-                                        <p class="training-title">Web Development (PHP, MySQL)</p>
-                                        <p>National Institute of Electronics & Information Technology</p>
-                                        <p class="last_train">Duration - 7M</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="resume-right">
-                        <div class="resume_item resume_education">
-                            <div class="title">
-                                <p class="first_edu">Education</p>
-                            </div>
-                            <ul id="education_items">
-                                <li class="education_item">
-                                    <div class="li_wrap">
-                                        <div class="date">2015</div>
-                                    <div class="info">
-                                        <p class="semi-bold info_title">Electrical Engineering</p>
-                                        <p class="info_sch">RCC Institute of Information Technology</p>
-                                        <p class="info_addr">Maulana Abul Kalam Azad University of Technology</p>
-                                        <p class="info_grade">DGPA - 7.84</p>
-                                    </div>
-                                    </div>
-                                </li>
-                                <li class="education_item">
-                                    <div class="li_wrap">
-                                        <div class="date">2011</div>
-                                    <div class="info">
-                                        <p class="semi-bold info_title">Sciences</p>
-                                        <p class="info_sch">Dum Dum Kishore Bharati High School</p>
-                                        <p class="info_addr">West Bengal Council of Higher Secondary Education</p>
-                                        <p class="info_grade">Score - 79.60%</p>
-                                    </div>
-                                    </div>
-                                </li>
-                                <li class="education_item">
-                                    <div class="li_wrap">
-                                        <div class="date">2009</div>
-                                        <div class="info">
-                                            <p class="semi-bold info_title">General</p>
-                                            <p class="info_sch">Gobardanga Khantura High School</p>
-                                            <p class="info_addr">West Bengal Board of Secondary Education</p>
-                                            <p id="info_grade" class="last_edu">Score - 83.75%</p>
+                            <div class="resume_item resume_training">
+                                <div class="title">
+                                    <p class="first_train">Training</p>
+                                </div>
+                                <ul id="training_items">
+                                    <li class="training_item" id="first_training_item">
+                                        <span>2016</span>
+                                        <div>
+                                            <p class="training-title">Infosys Fresher Training</p>
+                                            <p>Microsoft .NET</p>
+                                            <p>Duration - 5M</p>
                                         </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="resume_item resume_skills">
-                            <div class="title">
-                                <p class="first_skill">Skills</p>
+                                    </li>
+                                    <li class="training_item">
+                                        <span>2015</span>
+                                        <div>
+                                            <p class="training-title">Web Development (PHP, MySQL)</p>
+                                            <p>National Institute of Electronics & Information Technology</p>
+                                            <p class="last_train">Duration - 7M</p>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
-                            <ul id="skill_items">
-                                <li class="skill_item">
-                                    <p>HTML, CSS, JS, SASS</p>
-                                    <span id="rating" class="last_skill">
-                                        <img src="assets/images/Vector.svg" alt="">
-                                        <img src="assets/images/Vector.svg" alt="">
-                                        <img src="assets/images/Vector.svg" alt="">
-                                        <img src="assets/images/Vector.svg" alt="">
-                                        <img src="assets/images/Vector.svg" alt="">
-                                    </span>
-                                </li>
-                                <li class="skill_item">
-                                    <p>jQuery, Bootstrap, Foundation</p>
-                                    <span class="rating">
-                                        <img src="assets/images/Vector.svg" alt="">
-                                        <img src="assets/images/Vector.svg" alt="">
-                                        <img src="assets/images/Vector.svg" alt="">
-                                        <img src="assets/images/Vector.svg" alt="">
-                                        <img src="assets/images/Vector.svg" alt="">
-                                    </span>
-                                </li>
-                                <li class="skill_item">
-                                    <p>C#, Java, AngularJS, Python</p>
-                                    <span class="rating">
-                                        <img src="assets/images/Vector.svg" alt="">
-                                        <img src="assets/images/Vector.svg" alt="">
-                                        <img src="assets/images/Vector (1).svg" alt="">
-                                        <img src="assets/images/Vector (1).svg" alt="">
-                                        <img src="assets/images/Vector (1).svg" alt="">
-                                    </span>
-                                </li>
-                                <li class="skill_item">
-                                    <p>Visual Studio, Eclipse, Git</p>
-                                    <span class="rating">
-                                        <img src="assets/images/Vector.svg" alt="">
-                                        <img src="assets/images/Vector.svg" alt="">
-                                        <img src="assets/images/Vector.svg" alt="">
-                                        <img src="assets/images/Vector (1).svg" alt="">
-                                        <img src="assets/images/Vector (1).svg" alt="">
-                                    </span>
-                                </li>
-                                <li class="skill_item">
-                                    <p>Adobe Photoshop</p>
-                                    <span class="rating">
-                                        <img src="assets/images/Vector.svg" alt="">
-                                        <img src="assets/images/Vector.svg" alt="">
-                                        <img src="assets/images/Vector.svg" alt="">
-                                        <img src="assets/images/Vector.svg" alt="">
-                                        <img src="assets/images/Vector (1).svg" alt="">
-                                    </span>
-                                </li>
-                                <li class="skill_item">
-                                    <p>Adobe illustrator</p>
-                                    <span class="rating">
-                                        <img src="assets/images/Vector.svg" alt="">
-                                        <img src="assets/images/Vector.svg" alt="">
-                                        <img src="assets/images/Vector.svg" alt="">
-                                        <img src="assets/images/Vector (1).svg" alt="">
-                                        <img src="assets/images/Vector (1).svg" alt="">
-                                    </span>
-                                </li>
-                            </ul>
                         </div>
-                        <div class="resume_item resume_interest">
-                            <div class="title">
-                                <p class="bold">Interests</p>
+                        <div class="resume-right">
+                            <div class="resume_item resume_education">
+                                <div class="title">
+                                    <p class="first_edu">Education</p>
+                                </div>
+                                <ul id="education_items">
+                                    <li class="education_item">
+                                        <div class="li_wrap">
+                                            <div class="date">2015</div>
+                                            <div class="info">
+                                                <p class="semi-bold info_title">Electrical Engineering</p>
+                                                <p class="info_sch">RCC Institute of Information Technology</p>
+                                                <p class="info_addr">Maulana Abul Kalam Azad University of Technology
+                                                </p>
+                                                <p class="info_grade">DGPA - 7.84</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="education_item">
+                                        <div class="li_wrap">
+                                            <div class="date">2011</div>
+                                            <div class="info">
+                                                <p class="semi-bold info_title">Sciences</p>
+                                                <p class="info_sch">Dum Dum Kishore Bharati High School</p>
+                                                <p class="info_addr">West Bengal Council of Higher Secondary Education
+                                                </p>
+                                                <p class="info_grade">Score - 79.60%</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="education_item">
+                                        <div class="li_wrap">
+                                            <div class="date">2009</div>
+                                            <div class="info">
+                                                <p class="semi-bold info_title">General</p>
+                                                <p class="info_sch">Gobardanga Khantura High School</p>
+                                                <p class="info_addr">West Bengal Board of Secondary Education</p>
+                                                <p id="info_grade" class="last_edu">Score - 83.75%</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
-                            <ul>
-                                <li class="itenterest_item">
-                                    <img src="assets/images/activity.svg" alt="Gym image">
-                                </li>
-                                <li class="itenterest_item">
-                                    <img src="assets/images/cinema.svg" alt="Cinema image">
-                                </li>
-                                <li class="itenterest_item">
-                                    <img src="assets/images/design.svg" alt="Design image">
-                                </li>
-                            </ul>
+                            <div class="resume_item resume_skills">
+                                <div class="title">
+                                    <p class="first_skill">Skills</p>
+                                </div>
+                                <ul id="skill_items">
+                                    <li class="skill_item">
+                                        <p>HTML, CSS, JS, SASS</p>
+                                        <span id="rating" class="last_skill">
+                                            <img src="assets/images/Vector.svg" alt="">
+                                            <img src="assets/images/Vector.svg" alt="">
+                                            <img src="assets/images/Vector.svg" alt="">
+                                            <img src="assets/images/Vector.svg" alt="">
+                                            <img src="assets/images/Vector.svg" alt="">
+                                        </span>
+                                    </li>
+                                    <li class="skill_item">
+                                        <p>jQuery, Bootstrap, Foundation</p>
+                                        <span class="rating">
+                                            <img src="assets/images/Vector.svg" alt="">
+                                            <img src="assets/images/Vector.svg" alt="">
+                                            <img src="assets/images/Vector.svg" alt="">
+                                            <img src="assets/images/Vector.svg" alt="">
+                                            <img src="assets/images/Vector.svg" alt="">
+                                        </span>
+                                    </li>
+                                    <li class="skill_item">
+                                        <p>C#, Java, AngularJS, Python</p>
+                                        <span class="rating">
+                                            <img src="assets/images/Vector.svg" alt="">
+                                            <img src="assets/images/Vector.svg" alt="">
+                                            <img src="assets/images/Vector (1).svg" alt="">
+                                            <img src="assets/images/Vector (1).svg" alt="">
+                                            <img src="assets/images/Vector (1).svg" alt="">
+                                        </span>
+                                    </li>
+                                    <li class="skill_item">
+                                        <p>Visual Studio, Eclipse, Git</p>
+                                        <span class="rating">
+                                            <img src="assets/images/Vector.svg" alt="">
+                                            <img src="assets/images/Vector.svg" alt="">
+                                            <img src="assets/images/Vector.svg" alt="">
+                                            <img src="assets/images/Vector (1).svg" alt="">
+                                            <img src="assets/images/Vector (1).svg" alt="">
+                                        </span>
+                                    </li>
+                                    <li class="skill_item">
+                                        <p>Adobe Photoshop</p>
+                                        <span class="rating">
+                                            <img src="assets/images/Vector.svg" alt="">
+                                            <img src="assets/images/Vector.svg" alt="">
+                                            <img src="assets/images/Vector.svg" alt="">
+                                            <img src="assets/images/Vector.svg" alt="">
+                                            <img src="assets/images/Vector (1).svg" alt="">
+                                        </span>
+                                    </li>
+                                    <li class="skill_item">
+                                        <p>Adobe illustrator</p>
+                                        <span class="rating">
+                                            <img src="assets/images/Vector.svg" alt="">
+                                            <img src="assets/images/Vector.svg" alt="">
+                                            <img src="assets/images/Vector.svg" alt="">
+                                            <img src="assets/images/Vector (1).svg" alt="">
+                                            <img src="assets/images/Vector (1).svg" alt="">
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="resume_item resume_interest">
+                                <div class="title">
+                                    <p class="bold">Interests</p>
+                                </div>
+                                <ul>
+                                    <li class="itenterest_item">
+                                        <img src="assets/images/activity.svg" alt="Gym image">
+                                    </li>
+                                    <li class="itenterest_item">
+                                        <img src="assets/images/cinema.svg" alt="Cinema image">
+                                    </li>
+                                    <li class="itenterest_item">
+                                        <img src="assets/images/design.svg" alt="Design image">
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
+ 
 
 
     <script src="./assets/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+
     <script src="./assets/js/app.js"></script>
 </body>
 

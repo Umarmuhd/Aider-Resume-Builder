@@ -1,0 +1,15 @@
+@media print{
+    .no-print, .no-print * { display: none !important; }
+    body * {
+        visibility: hidden;
+    }
+    .resume * {
+        visibility: visible;
+        background-color: white;
+    }
+    .resume{
+        position: absolute;
+        top: 40px;
+        left: 30px;
+    }
+}

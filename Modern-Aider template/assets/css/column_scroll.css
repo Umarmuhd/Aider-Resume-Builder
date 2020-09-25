@@ -26,4 +26,12 @@
 		margin: 0px auto;
 	}
 
+	.resume{
+		/* width: 595px; */
+		position: fixed;
+		top: 40px;		
+		margin: 0 auto;
+
+	}
+
 }

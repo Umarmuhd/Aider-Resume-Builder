@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700;800&display=swap"
         rel="stylesheet">
 
+        <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap"
         rel="stylesheet" />
 
@@ -45,10 +48,7 @@
                         <div class="toggle-option" class="opens" data-toggle="font" id="openSans">Abc</div>
                         <div class="toggle-option" class="monos" data-toggle="font" id="monospace">Abc</div>
                     </div>
-                </div>
-
-                <br>
-                <br>
+                </div>      <br>          <br>
 
                 <div>
                     <h2>Title case</h2>
@@ -56,7 +56,7 @@
                         <div class="toggle-option selected" data-toggle="case" id="caseNormal">Default</div>
                         <div class="toggle-option" data-toggle="case" id="caseUpper">Uppercase</div>
                     </div>
-                </div> <br><br>
+                </div> <br> <br>
 
                 <hr>
 
@@ -250,9 +250,51 @@
         </div>
     </div>
 
+    <div class="bottom-navbar">
+        <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark">
+
+            <button class="btn btn-block btn-xs btn-success button-add" onclick="insertList();">+</button> <br>
+            <div class="nav-item dropup">
+                <a class="nav-link dropdown-toggle toggle-button" href="#" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Title Case</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown10">
+                  <a class="dropdown-item" href="#"><div class="toggle-option selected" data-toggle="case" id="caseNormal">Default</div></a>
+                  <a class="dropdown-item" href="#"><div class="toggle-option" data-toggle="case" id="caseUpper">Uppercase</div></a>
+                </div>
+            </div>
+            <button class="btn btn-block btn-success button-print" onclick="window.print()">PDF</button> <br>
+            <div class="nav-item dropup">
+                <a class="nav-link dropdown-toggle toggle-button" href="#" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Fonts(Abc)</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown10">
+                  <a class="dropdown-item" href="#"><div class="toggle-option" class="mont" data-toggle="font" id="montserrat">Abc</div></a>
+                  <a class="dropdown-item" href="#"><div class="toggle-option selected" class="pop" data-toggle="font" id="poppins">Abc</div></a>
+                  <a class="dropdown-item" href="#"><div class="toggle-option" class="opens" data-toggle="font" id="openSans">Abc</div></a>
+                  <a class="dropdown-item" href="#"><div class="toggle-option" class="monos" data-toggle="font" id="monospace">Abc</div></a>
+                </div>
+            </div>
+
+            <div class="nav-item dropup">
+                <a class="nav-link dropdown-toggle toggle-button" href="#" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bullet(*)</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown10">
+                  <a class="dropdown-item" href="#"><button class="btn btn-xs custom-button" onclick="changeListStyle('disc');">&#9899;</button></a>
+                  <a class="dropdown-item" href="#"><button class="btn btn-xs custom-button" onclick="changeListStyle('circle');">&#9898;</button></a>
+                  <a class="dropdown-item" href="#"><button class="btn btn-xs custom-button" onclick="changeListStyle('square');">&#9632;</button></a>
+                </div>
+            </div>
+                       
+          </nav>
+    </div>
+
     <script src="./assets/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
     <script src="./assets/js/app.js"></script>
 </body>
 
