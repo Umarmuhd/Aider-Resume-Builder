@@ -7,7 +7,7 @@ Aider Resume Builder is a resume builder crafted by Team Aider for the Ingressiv
 The free resume builder by team aider requires no registeration done on the site. You can simply do the following to get started on using the resume builder to set up your first resume:
 
 <ol>
-<li>Visit our URL using this link: </li>
+<li>Visit our URL using this link: https://aider-resume.netlify.app</li>
 <li>Click on Build Resume button</li>
 <li>Select any template of yours by clicking any image shown on that page</li>
 <li>You'll be taken to your dashboard, you can make any edits on the text by simply clicking on the text you want to edit</li>
@@ -39,3 +39,4 @@ We highly recommend the use of a tablet or PC for comfortable editing of your re
 https://www.figma.com/file/PWBtWrZHHtfMcJm5DCwbCD/Ingressive---Team-Aider---Resume-Builder?node-id=3%3A5
 
 # Live Link
+https://aider-resume.netlify.app
