@@ -18,7 +18,7 @@
 @media print {
 	.no-print, .no-print * { display: none !important; }
 	
-	#left , #page {
+	#page {
 		overflow: initial;
 		min-height: initial;
 		height: initial;
@@ -27,7 +27,7 @@
 	}
 
 	.resume{
-		/* width: 595px; */
+		width: 595px;
 		position: fixed;
 		top: 40px;		
 		margin: 0 auto;

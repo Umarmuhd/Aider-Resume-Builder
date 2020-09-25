@@ -332,9 +332,23 @@ kbd {
 
 
 .navbar{
-	max-width: 800px;
+	max-width: 80%;
 	margin: 0 auto;
-	padding: 5px 10%;
 	color: white;
 	background-color:tan;
+}
+
+.navbar a{
+	color: white;
+}
+
+.nav-wrap{
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.dropup{
+	background-color: #28A745;
 }
