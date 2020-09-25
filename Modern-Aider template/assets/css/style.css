@@ -323,7 +323,13 @@ kbd {
 }
 
 .button-add, .button-print{
-	width: 50px;
+	padding: 5px 10px;
+	width: auto;
+}
+
+.dropdown-toggle a{
+	width: auto;
+	padding: 5px 10px;
 }
 
 .no-print{
@@ -332,7 +338,7 @@ kbd {
 
 
 .navbar{
-	max-width: 80%;
+	max-width: 60%;
 	margin: 0 auto;
 	color: white;
 	background-color:tan;
@@ -342,13 +348,28 @@ kbd {
 	color: white;
 }
 
+
 .nav-wrap{
 	display: flex;
 	justify-content: space-between;
-	width: 80%;
+	width: 60%;
 	margin: 0 auto;
 }
 
 .dropup{
 	background-color: #28A745;
+}
+
+@media screen and (max-width: 720px){
+	.navbar{
+		max-width: 100%;
+		margin: 0 auto;
+		color: white;
+		background-color:tan;
+	}
+	.nav-wrap{
+		display: flex;
+		width: 100%;
+		margin: 0 auto;
+	}
 }

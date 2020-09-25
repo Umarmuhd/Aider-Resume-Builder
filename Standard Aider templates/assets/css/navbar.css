@@ -1,5 +1,6 @@
 .button-add, .button-print{
-	width: 6rem;
+	padding: 5px 10px;
+	width: auto;
 }
 
 .no-print{
@@ -11,8 +12,9 @@
 	margin: 0 auto;
 	background-color: red;
 } */
+
 .navbar{
-	max-width: 80%;
+	max-width: 60%;
 	margin: 0 auto;
 	color: white;
 	background-color:tan;
@@ -25,7 +27,7 @@
 .nav-wrap{
 	display: flex;
 	justify-content: space-between;
-	width: 80%;
+	width: 50%;
 	margin: 0 auto;
 }
 
@@ -35,6 +37,14 @@
 
 @media screen and (max-width: 720px){
 	.navbar{
-		width: 100%;
+		max-width: 100%;
+		margin: 0 auto;
+		color: white;
+		background-color:tan;
+	}
+	.nav-wrap{
+		display: flex;
+		width: 80%;
+		margin: 0 auto;
 	}
 }
