@@ -33,9 +33,6 @@ ul{
     list-style: none;
 }
 
-.main{
-    display: flex;
-}
 .resume{
     width: 595px;
     height: auto;
@@ -375,6 +372,6 @@ ul.lower-alpha {
     display: none;
 }
 
-.print{
+.main{
     margin: 0 auto;
 }

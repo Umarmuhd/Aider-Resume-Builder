@@ -1,4 +1,13 @@
+
+
 @media print{
     .no-print, .no-print * { display: none !important; }
     .bottom-navbar, .bottom-navbar * { display: none !important;}
+    .main{
+        overflow: hidden;
+		min-height: initial;
+		height: initial;
+		position: relative;
+		margin-top: 0px;
+    }
 }
