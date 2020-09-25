@@ -218,3 +218,12 @@ ul{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+
+.no-print{
+    display: none;
+}
+
+.print{
+    margin: 0 auto;
+}
