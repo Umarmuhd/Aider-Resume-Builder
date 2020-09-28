@@ -114,6 +114,12 @@ p{
     line-height: 23px;
 }
 
+.title p{
+	font-size: 15px;
+    font-weight: 400;
+    line-height: 23px
+}
+
 .semi-bold{
     font-size: 11px;
     font-weight: 400;
@@ -274,10 +280,10 @@ ul.lower-alpha {
 	background-color: #222;
 }
 .toggle-option.selected {
-	/* background-color: #27AE60; */
-	/* background-color: #5cb85c; */
 	background-color: #E74C3C;
 }
+
+
 
 
 .custom-button {
@@ -345,6 +351,10 @@ kbd {
 }
 
 .navbar a{
+	color: white;
+}
+
+.navbar div{
 	color: white;
 }
 

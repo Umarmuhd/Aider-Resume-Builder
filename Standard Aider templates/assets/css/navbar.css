@@ -7,11 +7,18 @@
 	display: none;
 }
 
-/* .bottom-navbar{
-	width: 1000px;
-	margin: 0 auto;
-	background-color: red;
-} */
+.robo{
+	font-family: "Roboto", sans-serif;
+}
+.cur{
+	font-family: cursive, sans-serif;	
+}
+.ubun{
+	font-family: "Ubun", sans-serif;
+}
+.monos{
+	font-family: monospace, sans-serif
+}
 
 .navbar{
 	max-width: 60%;
@@ -21,6 +28,10 @@
 }
 
 .navbar a{
+	color: white;
+}
+
+.navbar div{
 	color: white;
 }
 

@@ -33,50 +33,7 @@
 
 <body>
 
-    <div class="main">
-        <div class="no-print" id="left">
-            <div id="panel">
-                <h3 class="text-center" data-toggle="modal">Aider</h3>
-                <button class="btn btn-block btn-success" onclick="window.print()">PRINT AS PDF</button>
-                <hr>
-                <h4 class="text-center">Template settings</h4> <br>
-                <br>
-                <div>
-                    <h2>Font type</h2>
-                    <div class="toggle-button">
-                        <div class="toggle-option" class="mont" data-toggle="font" id="montserrat">Abc</div>
-                        <div class="toggle-option selected" class="pop" data-toggle="font" id="poppins">Abc</div>
-                        <div class="toggle-option" class="opens" data-toggle="font" id="openSans">Abc</div>
-                        <div class="toggle-option" class="monos" data-toggle="font" id="monospace">Abc</div>
-                    </div>
-                </div> <br> <br>
-                <div>
-                    <h2>Title case</h2>
-                    <div class="toggle-button">
-                        <div class="toggle-option selected" data-toggle="case" id="caseNormal">Default</div>
-                        <div class="toggle-option" data-toggle="case" id="caseUpper">Uppercase</div>
-                    </div>
-                </div> <br> <br>
-                <hr>
-                <h4 class="text-center">Lists and points</h4>
-                <button class="btn btn-block btn-xs btn-success" onclick="insertList();">+</button> <br>
-                <h5>
-                    List style :
-                    <div class="toggle-button">
-                        <button class="btn btn-xs custom-button" onclick="changeListStyle('disc');">&#9899;</button>
-                        <button class="btn btn-xs custom-button" onclick="changeListStyle('circle');">&#9898;</button>
-                        <button class="btn btn-xs custom-button" onclick="changeListStyle('square');">&#9632;</button>
-                        <button class="btn btn-xs custom-button" onclick="changeListStyle('dash');">-</button>
-                        <button class="btn btn-xs custom-button" onclick="changeListStyle('decimal');">1.</button>
-                        <button class="btn btn-xs custom-button" onclick="changeListStyle('upper-roman');">I.</button>
-                        <button class="btn btn-xs custom-button" onclick="changeListStyle('lower-roman');">i.</button>
-                        <button class="btn btn-xs custom-button" onclick="changeListStyle('upper-alpha');">A.</button>
-                        <button class="btn btn-xs custom-button" onclick="changeListStyle('lower-alpha');">a.</button>
-                    </div>
-                </h5>
-            </div>
-        </div>
-
+    <div class="main" id="toPrint">
         <div class="resume" id="page">
             <div class="resume-left">
                 <div class="resume_profile">
@@ -118,7 +75,7 @@
                         <div class="title">
                             <p class="first-edu" class="bold">Education</p>
                         </div>
-                        <ul>
+                        <ul id="education_items">
                             <li class="education_item">
                                 <p><span class="semi-bold">B.Eng Computer Engineering,</span> 2005 - 2010
                                 </p>
@@ -134,9 +91,9 @@
                 <div class="resume-content-2">
                     <div class="resume_item resume_experience section">
                         <div class="title">
-                            <p class="first-exp" class="bold">Work Experience</p>
+                            <p class="first-exp">Work Experience</p>
                         </div>
-                        <ul>
+                        <ul id="experience_items">
                             <li class="experience_item">
                                 <p class="semi-bold date">Sep 2017 to Present</p>
                                 <p class="semi-bold role">Team Lead- Google</p>
@@ -160,7 +117,7 @@
                             <div class="title">
                                 <p class="bold">Tools</p>
                             </div>
-                            <ul>
+                            <ul class="tool_items" id="tool_items">
                                 <li class="tool_item">
                                     Adobe XD
                                 </li>
@@ -249,45 +206,58 @@
     </div>
 
     <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark">
-
         <div class="nav-wrap">
-            <button class="btn btn-block btn-xs btn-success button-add" onclick="insertList();" title="Add"><i class="fa fa-plus-square-o" aria-hidden="true"></i></button>
+            <!-- Add Button -->
+            <button class="btn btn-block btn-xs btn-success button-add" onclick="insertList();" title="Add">
+                <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+            </button>
+
+            <!-- Font Casing Dropdown -->
             <div class="nav-item dropup">
                 <a class="nav-link dropdown-toggle toggle-button case" href="#" id="dropdown10" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false" title="Font case">Aa</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown10">
-                    <a class="dropdown-item" href="#">
-                        <div class="toggle-option selected" data-toggle="case" id="caseNormal">Default</div>
-                    </a>
-                    <a class="dropdown-item" href="#">
-                        <div class="toggle-option" data-toggle="case" id="caseUpper">Uppercase</div>
-                    </a>
-                </div>
-            </div>
-            <button class="btn btn-block btn-success button-print" onclick="window.print()" title="Print"><i class="fa fa-print"
-                    aria-hidden="true"></i></button>
-            <div class="nav-item dropup">
-                <a class="nav-link dropdown-toggle toggle-button" title="Font" href="#" id="dropdown10" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false"><i class="fa fa-font" aria-hidden="true"></i></a>
-                <div class="dropdown-menu" aria-labelledby="dropdown10">
-                    <a class="dropdown-item" href="#">
-                        <div class="toggle-option" class="mont" data-toggle="font" id="montserrat">Montserrat</div>
-                    </a>
-                    <a class="dropdown-item" href="#">
-                        <div class="toggle-option selected" class="pop" data-toggle="font" id="poppins">Poppins</div>
-                    </a>
-                    <a class="dropdown-item" href="#">
-                        <div class="toggle-option" class="opens" data-toggle="font" id="openSans">Opensans</div>
-                    </a>
-                    <a class="dropdown-item" href="#">
-                        <div class="toggle-option" class="monos" data-toggle="font" id="monospace">Monospace</div>
-                    </a>
+                    <div class="toggle-option selected dropdown-item" data-toggle="case" href="#" id="caseNormal">Abc
+                    </div>
+                    <div class="toggle-option dropdown-item" href="#" data-toggle="case" id="caseUpper">ABC
+                    </div>
                 </div>
             </div>
 
+            <!-- Print Button -->
+            <button class="btn btn-block btn-success button-print" onclick="window.print()" title="Print">
+                <i class="fa fa-print" aria-hidden="true"></i>
+            </button>
+
+            <!-- Fonts Toggling Dropdown -->
             <div class="nav-item dropup">
-                <a class="nav-link dropdown-toggle toggle-button" title="Bullet" href="#" id="dropdown10" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false"><i class="fa fa-dot-circle-o" aria-hidden="true"></i></a>
+                <a class="nav-link dropdown-toggle toggle-button" title="Font" href="#" id="dropdown10"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-font"
+                        aria-hidden="true"></i></a>
+                <div class="dropdown-menu" aria-labelledby="dropdown10">
+
+                    <div class="toggle-option dropdown-item mont" href="#" data-toggle="font" id="montserrat">Montserrat
+                    </div>
+
+                    <div class="toggle-option selected dropdown-item pop" href="#" data-toggle="font" id="poppins">
+                        Poppins
+                    </div>
+
+                    <div class="toggle-option dropdown-item opens" href="#" data-toggle="font" id="openSans">
+                        Opensans
+                    </div>
+
+                    <div class="toggle-option dropdown-item monos" href="#" data-toggle="font" id="monospace">Monospace
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- List Styling Dropdown -->
+            <div class="nav-item dropup">
+                <a class="nav-link dropdown-toggle toggle-button" title="Bullet" href="#" id="dropdown10"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-dot-circle-o"
+                        aria-hidden="true"></i></a>
                 <div class="dropdown-menu" aria-labelledby="dropdown10">
                     <a class="dropdown-item" href="#"><button class="btn btn-xs custom-button"
                             onclick="changeListStyle('disc');">&#9899; Disc</button></a>
@@ -318,7 +288,7 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
 
-
+    <script src="assets/js/html2pdf.bundle.min.js"></script>
     <script src="./assets/js/app.js"></script>
 </body>
 

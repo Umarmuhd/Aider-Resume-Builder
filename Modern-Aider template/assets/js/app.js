@@ -24,19 +24,19 @@ $('.toggle-option').click(function(){
 	}
 });
 
-$('input[name="sectionToggle"]').change(function(){
-	toggleSection($(this).val(),$(this).is(':checked'));
-});
+// $('input[name="sectionToggle"]').change(function(){
+// 	toggleSection($(this).val(),$(this).is(':checked'));
+// });
 
 
-function toggleSection(sectionName,toggleState)
-{
-	if(toggleState==true)
-		$('input[value="'+sectionName+'"]').attr('checked','true');
-	else
-		$('input[value="'+sectionName+'"]').removeAttr('checked');
-	$('#'+sectionName).toggle();
-}
+// function toggleSection(sectionName,toggleState)
+// {
+// 	if(toggleState==true)
+// 		$('input[value="'+sectionName+'"]').attr('checked','true');
+// 	else
+// 		$('input[value="'+sectionName+'"]').removeAttr('checked');
+// 	$('#'+sectionName).toggle();
+// }
 
 function changeTemplate(toggleType,toggleValue)
 {
@@ -63,34 +63,45 @@ function changeTemplate(toggleType,toggleValue)
 function insertList()
 {	
 	node = getSelectionContainerElement();
-	var ul = document.createElement("ul");
-	ul.style.marginLeft = '0px';
-	
-	console.log(getSelectionContainerElement())
 
 	if((node.className === "last-exp") || (node.className === "first-exp")){
-		if(node.className === "last-exp"){
-			$(".last-exp")[1].style.marginBottom = "10px"
+
+		let li = document.createElement("li");
+		li.classList.add('experience_item')
+		li.innerHTML = "<p class='semi-bold date'>Mnt YEAR to Mnt YEAR</p><p class='semi-bold role'>Role - Company</p><p class='last-exp'>Job Role Description example: sit deserunt numquam esse earum nemo accusantium quis molestias obcaecati eaque laboriosam incidunt!</p>"
+
+		let experienceItems = document.getElementById("experience_items")
+
+		if (node.className === "first-exp"){			
+		experienceItems.insertBefore(li, experienceItems.childNodes[0])
 		}
-		else if(node.className === "first-exp"){
-			ul.style.marginTop = "10px"
+		else if (node.className === "last-exp"){
+			let currentNode = getSelectionContainerElement();
+            let currentLi = currentNode.parentNode
+            currentLi.parentNode.insertBefore(li, currentLi.nextSibling);
 		}
-		ul.innerHTML = "<li class='experience_item'><p class='semi-bold date'>Feb 2014 to Aug 2016</p><p class='semi-bold role'>Senior Frontend Developer- Microsoft</p><p class='last-exp first-exp'>Front-end lead for this Flex based 	application with a mobile aspect. Was tasked with building a large high profile Web 2.0 project.</p></li>";
+				
 	}
 
 	else if((node.className === "last-edu") || (node.className === "first-edu")){
 
-		if(node.className === "last-edu"){
-			$(".last-edu")[0].style.marginBottom = "10px"
+		let li = document.createElement("li");
+		li.classList.add('education_item');
+		li.innerHTML = "<p><span class='semi-bold'>B.Eng Computer Engineering,</span> 2005 - 2010</p><p>Massachusetts University, US</p><p class='last-edu'>CGPA : 4.02 /5</p>"
+
+		let educationItems = document.getElementById("education_items")
+
+		if(node.className === "first-edu"){			
+			educationItems.insertBefore(li, educationItems.childNodes[0])
 		}
-		else if(node.className === "first-edu"){
-			ul.style.marginTop = "10px"
+		else if(node.className === "last-edu"){
+			let currentNode = getSelectionContainerElement();
+            let currentLi = currentNode.parentNode
+            currentLi.parentNode.insertBefore(li, currentLi.nextSibling);
 		}
 
-		ul.innerHTML = "<li class='education_item'><p><span class='semi-bold'>B.Eng Computer Engineering,</span> 2005 - 2010</p><p>Massachusetts University, US</p><p class='last-edu'>CGPA : 4.02 /5</p></li>"
 	}
 
-	insertAfter(node,ul);
 }
 
 function changeListStyle(value)
@@ -143,4 +154,16 @@ function getSelectionContainerElement()
 
 function insertAfter(referenceNode, newNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
+
+
+function printDiv(){
+	var divContent = document.getElementById("toPrint").innerHTML
+	var a = window.open('', '', 'height = auto, width = 595');
+	a.document.write('<html>')
+	a.document.write('<body>')
+	a.document.write(divContent)
+	a.document.write('</body></html>')
+	a.document.close()
+	a.print()
 }

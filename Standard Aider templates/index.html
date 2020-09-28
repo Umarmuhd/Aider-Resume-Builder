@@ -27,12 +27,12 @@
     <!-- Navbar Css -->
     <link rel="stylesheet" href="./assets/css/navbar.css">
 
-    
+
 </head>
 
 <body>
 
-    <div class="main">
+    <div class="main container-fluid">
         <div class="resume" id="toPrint">
             <div id="page">
                 <div class="topbar">
@@ -73,7 +73,8 @@
                                     <p class="semi-bold">2015 - Present</p>
                                     <p>Senior User Interfce Designer</p>
                                     <p>Infosys Limited, Communication Design Group</p>
-                                    <p class="exp_role">Primary role is to design and/or develop the front end of
+                                    <p class="exp_role">Primary role is to design and/or develop the front
+                                        end of
                                         responsive web
                                         applications for
                                         Infosys
@@ -96,7 +97,7 @@
                                     <div>
                                         <p class="training-title">Infosys Fresher Training</p>
                                         <p>Microsoft .NET</p>
-                                        <p>Duration - 5M</p>
+                                        <p class="last_train">Duration - 5M</p>
                                     </div>
                                 </li>
                                 <li class="training_item">
@@ -147,7 +148,7 @@
                                             <p class="semi-bold info_title">General</p>
                                             <p class="info_sch">Gobardanga Khantura High School</p>
                                             <p class="info_addr">West Bengal Board of Secondary Education</p>
-                                            <p id="info_grade" class="last_edu">Score - 83.75%</p>
+                                            <p class="info_grade">Score - 83.75%</p>
                                         </div>
                                     </div>
                                 </li>
@@ -245,37 +246,33 @@
 
     <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark">
         <div class="nav-wrap">
-            <button class="btn btn-block btn-xs btn-success button-add" onclick="insertList()" title="Add"><i class="fa fa-plus-square-o" aria-hidden="true"></i></button>
+            <button class="btn btn-block btn-xs btn-success button-add" onclick="insertList()" title="Add"><i
+                    class="fa fa-plus-square-o" aria-hidden="true"></i></button>
             <div class="nav-item dropup">
                 <a class="nav-link dropdown-toggle toggle-button" href="#" id="dropdown10" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false" title="Font Case">Aa</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown10">
-                    <a class="dropdown-item" href="#">
-                        <div class="toggle-option selected" data-toggle="case" id="caseNormal">Default</div>
-                    </a>
-                    <a class="dropdown-item" href="#">
-                        <div class="toggle-option" data-toggle="case" id="caseUpper">Uppercase</div>
-                    </a>
+                    <div class="toggle-option selected dropdown-item" data-toggle="case" id="caseNormal" href="#">
+                        Abc</div>
+                    <div class="toggle-option dropdown-item" data-toggle="case" id="caseUpper" href="#">ABC</div>
                 </div>
             </div>
-            <button class="btn btn-block btn-success button-print" onclick="window.print()" title="Print"><i class="fa fa-print"
-                aria-hidden="true"></i></button>
+            <button class="btn btn-block btn-success button-print" onclick="window.print()" title="Print"><i
+                    class="fa fa-print" aria-hidden="true"></i></button>
             <div class="nav-item dropup">
                 <a class="nav-link dropdown-toggle toggle-button" href="#" id="dropdown10" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false" title="Fonts"><i class="fa fa-font" aria-hidden="true"></i></a>
+                    aria-haspopup="true" aria-expanded="false" title="Fonts"><i class="fa fa-font"
+                        aria-hidden="true"></i></a>
                 <div class="dropdown-menu" aria-labelledby="dropdown10">
-                    <a class="dropdown-item" href="#">
-                        <div class="toggle-option" data-toggle="font" id="Roboto">Roboto</div>
-                    </a>
-                    <a class="dropdown-item" href="#">
-                        <div class="toggle-option selected" data-toggle="font" id="Cursive">Cursive</div>
-                    </a>
-                    <a class="dropdown-item" href="#">
-                        <div class="toggle-option" data-toggle="font" id="Ubuntu">Ubuntu</div>
-                    </a>
-                    <a class="dropdown-item" href="#">
-                        <div class="toggle-option" data-toggle="font" id="Monospace">Monospace</div>
-                    </a>
+                    <div class="toggle-option selected dropdown-item robo" data-toggle="font" id="Roboto" href="#">
+                        Roboto
+                    </div>
+                    <div class="toggle-option dropdown-item cur" href="#" data-toggle="font" id="Cursive">Cursive
+                    </div>
+                    <div class="toggle-option dropdown-item ubun" href="#" data-toggle="font" id="Ubuntu">Ubuntu
+                    </div>
+                    <div class="toggle-option dropdown-item monos" href="#" data-toggle="font" id="Monospace">Monospace
+                    </div>
                 </div>
             </div>
         </div>
@@ -295,7 +292,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
-
+    <script src="assets/js/html2pdf.bundle.min.js"></script>
     <script src="./assets/js/app.js"></script>
 </body>
 

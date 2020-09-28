@@ -181,7 +181,7 @@ ul{
     margin-bottom: 3px;
 }
 
-#info_grade{
+.info_grade{
 	margin-top: 3px;
 }
 
@@ -268,45 +268,6 @@ ul.square {
 	margin-left: 0px;
 	padding-left: 12px;
 }
-ul.dash {
-	list-style: none;
-	padding-left: 0px;
-	margin-left: 0px;
-}
-ul.dash li {
-	padding-left: 20px;
-	text-indent: -1em;
-}
-ul.dash li:before {
-	content: "-";
-	padding-right: 10px;
-}
-ul.decimal {
-	list-style: decimal;
-	margin-left: 0px;
-	padding-left: 20px;
-}
-ul.upper-roman {
-	list-style: upper-roman;
-	margin-left: 0px;
-	padding-left: 20px;
-}
-ul.lower-roman {
-	list-style: lower-roman;
-	margin-left: 0px;
-	padding-left: 20px;
-}
-ul.upper-alpha {
-	list-style: upper-alpha;
-	margin-left: 0px;
-	padding-left: 20px;
-}
-ul.lower-alpha {
-	list-style: lower-alpha;
-	margin-left: 0px;
-	padding-left: 20px;
-}
-
 
 .corner {
 	border-radius: 0px;
@@ -328,8 +289,6 @@ ul.lower-alpha {
 	background-color: #222;
 }
 .toggle-option.selected {
-	/* background-color: #27AE60; */
-	/* background-color: #5cb85c; */
 	background-color: #E74C3C;
 }
 
